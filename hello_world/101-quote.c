@@ -8,9 +8,9 @@
 int main(void)
 {
 	char a[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	unsigned i = 0;
+	unsigned int i = 0;
 
-	for (i = 0 ; i <= strlen(a) ; i++)
+	for (i = 0 ; i < strlen(a) ; i++)
 	{
 		putchar (a[i]);
 	}
