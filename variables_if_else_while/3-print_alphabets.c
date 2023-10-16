@@ -22,10 +22,6 @@ int main(void)
 
 		a++;
 		putchar(c);
-		if (a == 91)
-		{
-			putchar(36);
-		}
 	}
 	putchar('\n');
 	return (0);
