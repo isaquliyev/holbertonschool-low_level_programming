@@ -4,18 +4,16 @@
  *
  * @n: variable.
  *
- * @a: n % 10
- *
  * Return: last digit.
  */
 int print_last_digit(int n)
 {
-	int a = n % 10;
+	n = n % 10;
 
-	if (a < 0)
+	if (n < 0)
 	{
-		a = -1 * a;
+		n = -1 * n;
 	}
-	_putchar( a + '0');
-	return (a);
+	_putchar(n + '0');
+	return (n);
 }
