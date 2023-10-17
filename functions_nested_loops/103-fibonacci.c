@@ -8,8 +8,6 @@ int main(void)
 {
 	long a = 1, b = 2, temp, sum = 0;
 
-	int c = 0;
-
 	while (a < 4000000)
 	{
 		if (a % 2 == 0)
