@@ -23,7 +23,15 @@ void times_table(void)
 			{
 				_putchar(',');
 			}
-			_putchar(' ');
+			if (i * j < 9)
+			{
+				_putchar(' ');
+				_putchar(' ');
+			}
+			else
+			{
+				_putchar(' ');
+			}
 			j++;
 		}
 		j = 0;
