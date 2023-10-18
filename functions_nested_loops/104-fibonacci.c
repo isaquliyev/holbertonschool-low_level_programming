@@ -12,11 +12,9 @@
 
 char *addLargeNumbers(char num1[], char num2[], char result[])
 {
-	int len1 = strlen(num1), len2 = strlen(num2);
+	int len1 = strlen(num1), len2 = strlen(num2), sum, i;
 
 	int maxLength = len2, resultArr[1000] = {0}, carry = 0, digit1, digit2;
-
-	int sum, i;
 
 	for (i = 0; i < maxLength; i++)
 	{
@@ -45,7 +43,9 @@ char *addLargeNumbers(char num1[], char num2[], char result[])
 		resultArr[maxLength] = carry;
 		maxLength++;
 	}
-	int resultLength = maxLength;
+	int resultLength;
+
+	resultLength = maxLength;
 
 	for (i = 0; i < maxLength; i++)
 		result[i] = resultArr[maxLength - 1 - i] + '0';
@@ -75,7 +75,9 @@ int main(void)
 		{
 			printf("\n");
 		}
-		char *temp = addLargeNumbers(num1, num2, result);
+		char *temp;
+
+		temp = addLargeNumbers(num1, num2, result);
 
 		strcpy(num1, num2);
 		strcpy(num2, temp);
