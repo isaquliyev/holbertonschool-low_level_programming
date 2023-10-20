@@ -8,6 +8,7 @@ void print_number(int n)
 {
 	unsigned int yeni;
 	int a = 1;
+
 	if (n < 0)
 	{
 		yeni = n * -1;
@@ -15,9 +16,9 @@ void print_number(int n)
 	}
 	else
 	{
-	    yeni = n;
+		yeni = n;
 	}
-	
+
 	do {
 		if (yeni < 10)
 		{
@@ -28,10 +29,10 @@ void print_number(int n)
 		yeni = yeni / 10;
 	} while (yeni != 0);
 	do {
-	    if (a < 10)
-	    {
-	        break;
-	    }
+		if (a < 10)
+		{
+			break;
+		}
 		_putchar(a % 10 + '0');
 		a = a / 10;
 	} while (a != 0);
