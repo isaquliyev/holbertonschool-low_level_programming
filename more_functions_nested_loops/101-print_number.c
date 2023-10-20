@@ -15,6 +15,11 @@ void print_number(int n)
 	}
 	while (n != 0)
 	{
+		if (n < 10)
+		{
+			_putchar(n + '0');
+			break;
+		}
 		a = a * 10 + n % 10;
 		n = n / 10;
 	}
