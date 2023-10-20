@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * print_number - prints numbers
  *
@@ -6,12 +6,12 @@
  */
 void print_number(int n)
 {
-    unsigned int yeni;
+	unsigned int yeni;
 	int a = 1;
 	if (n < 0)
 	{
 		yeni = n * -1;
-		putchar('-');
+		_putchar('-');
 	}
 	else
 	{
@@ -21,7 +21,7 @@ void print_number(int n)
 	do {
 		if (yeni < 10)
 		{
-			putchar(yeni + '0');
+			_putchar(yeni + '0');
 			break;
 		}
 		a = a * 10 + yeni % 10;
@@ -32,7 +32,7 @@ void print_number(int n)
 	    {
 	        break;
 	    }
-		putchar(a % 10 + '0');
+		_putchar(a % 10 + '0');
 		a = a / 10;
 	} while (a != 0);
 }
