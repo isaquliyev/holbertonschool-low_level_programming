@@ -7,7 +7,8 @@
  */
 int _atoi(char *s)
 {
-	int a = 0, i, minus = 0, size;
+	int b, i, minus = 0, size;
+	unsigned int a;
 
 	size = strlen(s);
 	for (i = 0; i < size; i++)
@@ -27,7 +28,8 @@ int _atoi(char *s)
 	}
 	if (minus % 2 == 1)
 	{
-		a = (-1) * a;
+		b = (-1) * a;
+		return (b);
 	}
 	return (a);
 }
