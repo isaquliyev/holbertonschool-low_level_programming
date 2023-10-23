@@ -30,7 +30,7 @@ int _atoi(char *s)
 	{
 		b = -1 * a;
 	}
-	else 
+	else
 		b = a;
 	return (b);
 }
