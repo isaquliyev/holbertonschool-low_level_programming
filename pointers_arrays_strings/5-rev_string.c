@@ -10,7 +10,12 @@ void rev_string(char *s)
 	char c;
 
 	n = strlen(s) - 1;
-	k = n / 2;
+	if (n % 2 == 0)
+		k = n / 2;
+	else
+	{
+		k = n / 2 + 1;
+	}
 	for (i = 0; i < k; i++)
 	{
 		c = *(s + i);
