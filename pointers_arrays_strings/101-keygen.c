@@ -7,24 +7,21 @@
  */
 int main(void)
 {
-        char s[15];
-        char *c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQSTUVWXYZ0123456789";
+	char s[34];
+        char *c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQSTUVWXYZ";
         int n, i = 0;
-
-        srand(time(0));
-        while (i != 8)
+        srand(time(NULL));
+        while (i != 33)
         {
                 n = rand() - RAND_MAX / 2;
                 if (n < 0){
                     n = n + 1;
                     n = -1 * n;
                 }
-                *(s + i) = *(c + (n % 62));
+                *(s + i) = *(c + (n % 52));
                 i++;
         }
-        *(s + 8) = '1';
-        *(s + 9) = 'a';
-        *(s + 10) = '\0';
+        *(s + 33) = '\0';
         puts(s);
         return (0);
 }
