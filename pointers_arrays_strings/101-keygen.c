@@ -9,7 +9,7 @@ int main(void)
 {
         char s[15];
         char *c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQSTUVWXYZ0123456789";
-        int n, i = 0, valid = 1, size = 0;
+        int n, i = 0;
 
         srand(time(0));
         while (i != 8)
