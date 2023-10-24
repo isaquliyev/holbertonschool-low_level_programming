@@ -1,4 +1,3 @@
-// Online C compiler to run C program online
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -25,8 +24,9 @@ int main(void)
 {
         char s[33];
         char c[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQSTUVWXYZ";
-        int n, i = 0, valid = 0;
+        int i = 0, valid = 0;
         unsigned int sum;
+
         srand(time(NULL));
         while (valid == 0){
         while (i != 33)
