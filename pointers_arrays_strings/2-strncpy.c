@@ -11,8 +11,6 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0, size = strlen(src);
 
-	if (n > size)
-		n = size + 1;
 	while (i < n)
 	{
 		if (i < size)
