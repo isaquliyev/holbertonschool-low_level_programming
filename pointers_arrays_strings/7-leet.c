@@ -6,15 +6,20 @@
  */
 char *leet(char *a)
 {
-	int i = 0;
+	int i = 0, j = 0;
+	char lower[6] = "aeotl";
+	char upper[6] = "AEOTL";
+	char leet[6] = "43071";
 
 	while (*(a + i) != '\0')
 	{
-		*(a + i) = (*(a + i) == 65 || *(a + i) == 97) ? '4' : *(a + i);
-		*(a + i) = (*(a + i) == 69 || *(a + i) == 101) ? '3' : *(a + i);
-		*(a + i) = (*(a + i) == 79 || *(a + i) == 111) ? '0' : *(a + i);
-		*(a + i) = (*(a + i) == 84 || *(a + i) == 116) ? '7' : *(a + i);
-		*(a + i) = (*(a + i) == 76 || *(a + i) == 108) ? '1' : *(a + i);
+		while (j < 5)
+		{
+			if (*(upper + j) == *(a + i) || *(lower + j) == *(a + i))
+				*(a + i) = *(leet + j);
+			j++;
+		}
+		j = 0;
 		i++;
 	}
 	return (a);
