@@ -9,7 +9,7 @@
  */
 char *infinite_add(char *num1, char *num2, char *result, int size_r)
 {
-	int len1 = strlen(num1), len2 = strlen(num2), sum, i, len3;
+	int len1 = strlen(num1), len2 = strlen(num2), sum, i;
 	int maxLength, resultArr[1000] = {0}, carry = 0, digit1, digit2;
 
 	maxLength = (len1 > len2) ? len1 : len2;
