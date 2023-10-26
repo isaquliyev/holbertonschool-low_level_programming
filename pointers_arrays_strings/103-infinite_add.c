@@ -9,7 +9,7 @@
  */
 char *infinite_add(char *num1, char *num2, char *result, int size_r)
 {
-	int len1 = strlen(num1), len2 = strlen(num2), sum, i, len3, resultLength;
+	int len1 = strlen(num1), len2 = strlen(num2), sum, i, len3;
 	int maxLength, resultArr[1000] = {0}, carry = 0, digit1, digit2;
 
 	maxLength = (len1 > len2) ? len1 : len2;
@@ -32,12 +32,13 @@ char *infinite_add(char *num1, char *num2, char *result, int size_r)
 		resultArr[maxLength] = carry;
 		maxLength++;
 	}
-	resultLength = maxLength;
-	for (i = 0; i < maxLength; i++)
-		*(result + i) = resultArr[maxLength - i - 1] + '0';
-	*(result + resultLength) = '\0';
-	len3 = strlen(result);
-	if (len3 >= size_r)
+	if (size_r <= maxLength)
 		result = 0;
+	else
+	{
+		for (i = 0; i < maxLength; i++)
+			*(result + i) = resultArr[maxLength - i - 1] + '0';
+		*(result + maxLength) = '\0';
+	}
 	return (result);
 }
