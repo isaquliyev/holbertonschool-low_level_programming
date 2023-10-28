@@ -46,7 +46,7 @@ void print_buffer(char *b, int size)
 			}
 			printf("\n");
 		}
-		i++
+		i++;
 	}
 	if (size == 0)
 		printf("\n");
