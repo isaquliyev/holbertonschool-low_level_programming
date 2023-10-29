@@ -11,6 +11,7 @@ int root_finder(int root, int n)
 	else if (root == n)
 		return (-1);
 	root_finder(root + 1, n);
+	return (0);
 }
 /**
  * _sqrt_recursion - finds root of given number using root_finder
