@@ -4,6 +4,7 @@
  * main - main point
  * @argc: number of argv
  * @argv: vector
+ * Return: always 0
  */
 int main(int argc, char **argv)
 {
