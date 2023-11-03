@@ -9,7 +9,7 @@
 int is_natural(char *n)
 {
 	int i = 0;
-
+i
 	while (*(n + i) != '\0')
 	{
 		if (!isdigit(*(n + i)))
@@ -32,15 +32,12 @@ int main(int argc, char **argv)
 	{
 		if (!is_natural(argv[i]))
 			break;
-		else
-		{
-			c++;
-			sum += atoi(argv[i]);
-		}
+		c++;
+		sum += atoi(argv[i]);
 	}
 	if (c == argc - 1)
 		printf("%d\n", sum);
 	else
 		printf("Error\n");
 	return (0);
-}
+i}
