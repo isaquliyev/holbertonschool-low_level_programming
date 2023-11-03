@@ -9,7 +9,7 @@
 int is_natural(char *n)
 {
 	int i = 0;
-i
+
 	while (*(n + i) != '\0')
 	{
 		if (!isdigit(*(n + i)))
