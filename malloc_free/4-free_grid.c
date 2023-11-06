@@ -11,7 +11,7 @@ void free_grid(int **grid, int height)
 
 	if (grid == NULL)
 		return;
-	for (i = height; i >= 0; height--)
+	for (i = height; i >= 0; i--)
 	{
 		free(grid[i]);
 	}
