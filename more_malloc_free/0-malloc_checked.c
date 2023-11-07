@@ -2,6 +2,7 @@
 /**
  * malloc_checked - allocate memory for integer
  * @b: variable for constructor
+ * Return: memory allocation
  */
 void *malloc_checked(unsigned int b)
 {
