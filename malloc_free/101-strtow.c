@@ -17,7 +17,9 @@ char **strtow(char *str)
 		i++;
 	}
 	s = malloc((row_count + 1) * sizeof(char *));
-	*(s + row_count) = NULL;
+	*(s + row_count) = NULL;  
+	if (row_count == 0)
+		return (NULL);
 	if (s == NULL)
 		return (NULL);
 	i = 0;
