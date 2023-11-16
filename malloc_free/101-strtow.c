@@ -12,12 +12,11 @@ char **strtow(char *str)
 
 	while (*(str + i - 1) != '\0')
 	{
-		if (*(str + i - 1) != 32 && *(str + i) == 32)
+		if (*(str + i - 1) != 32 && (*(str + i) == 32 || *(str + i) == '\0'))
 			row_count++;
 		i++;
 	}
 	s = malloc((row_count + 1) * sizeof(char *));
-	*(s + row_count) = NULL;  
 	if (row_count == 0)
 		return (NULL);
 	if (s == NULL)
