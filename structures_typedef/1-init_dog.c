@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "dog.h"
 /**
  * init_dog - initialize valuse to dog
  * @d: dog structure
