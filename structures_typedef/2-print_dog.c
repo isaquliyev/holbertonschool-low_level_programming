@@ -14,7 +14,7 @@ void print_dog(struct dog *d)
 		printf("%s\n", "(nil)");
 	else
 		printf("%s\n", d->name);
-	if ((void *)d->age == NULL)
+	if (d->age)
 		printf("%s\n", "(nil)");
 	else
 		printf("%f\n", d->age);
