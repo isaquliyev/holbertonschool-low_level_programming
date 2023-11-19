@@ -5,7 +5,7 @@
  * print_dog - prints details of dog
  * @d: dog structure
  * Return: nothing
- */.
+ */
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
