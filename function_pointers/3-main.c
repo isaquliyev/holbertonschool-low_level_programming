@@ -23,12 +23,12 @@ int main(int argc, char *argv[])
 	if ((*op != '*' && *op != '/' && *op != '+' && *op != '-' && *op != '%')
 			|| strlen(op) > 1)
 	{
-		printf("Error2\n");
+		printf("Error\n");
 		exit(99);
 	}
 	if ((*op == '/' || *op == '%') && b == 0)
 	{
-		printf("Error3\n");
+		printf("Error\n");
 		exit(100);
 	}
 	printf("%d\n", get_op_func(op)(a, b));
