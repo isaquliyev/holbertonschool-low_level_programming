@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	int num = atoi(argv[1]), i;
+	int num = atoi(argv[1]), i, mask = 0x000000ff;
 	int (*memory_checker)(int, char **) = main;
 	char opcode;
 
@@ -20,9 +20,9 @@ int main(int argc, char **argv)
 	{
 		opcode = *(char *)memory_checker;
 		if (i == num - 1)
-			printf("%.2x", opcode);
+			printf("%.2x", (opcode & mask));
 		else
-			printf("%.2x ", opcode), memory_checker++;
+			printf("%.2x ", (opcode & mask)), memory_checker++;
 	}
 	printf("\n");
 	return (0);
