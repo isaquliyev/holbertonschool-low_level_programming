@@ -8,12 +8,13 @@
  */
 int main(int argc, char **argv)
 {
-	int num = atoi(argv[1]), i, mask = 0x000000ff;
+	int num, i, mask = 0x000000ff;
 	int (*memory_checker)(int, char **) = main;
 	char opcode;
 
 	if (argc != 2)
 		printf("Error\n"), exit(1);
+	num = atoi(argv[1]);
 	if (num < 0)
 		printf("Error\n"), exit(2);
 	for (i = 0; i < num; i++)
