@@ -1,11 +1,13 @@
-global  main
-    extern  printf
-
-    section .text
+section .data
+	txt db "Hello, World", 0xA
+global main
 main:
-    push    message
-    call    printf
-    add     esp, 4
-    ret
-message:
-    db  'Hello, World', 10, 0
+	MOV rax, 0x1
+	MOV rdi, 0x1
+	MOV rsi, txt
+	MOV rdx, 13
+	SYSCALL
+
+	MOV rax, 0x3C
+	MOV rdi, 0x0
+	SYSCALL
