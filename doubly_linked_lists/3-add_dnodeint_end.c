@@ -3,7 +3,7 @@
 
 /**
  * add_dnodeint_end - adds new node at the end.
- * 
+ *
  * @head: initial linked list.
  *
  * @n: the integer value of new node.
