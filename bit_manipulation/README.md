@@ -1,0 +1,9 @@
+Bit manupilation
+
+Operations:
+&
+|
+<<
+>>
+~
+
