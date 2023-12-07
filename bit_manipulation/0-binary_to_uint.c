@@ -11,7 +11,7 @@
 unsigned int power_of_2(unsigned int n)
 {
 	unsigned int result = 1;
-	
+
 	while (n > 0)
 		n--, result *= 2;
 	return (result);
@@ -35,6 +35,8 @@ unsigned int binary_to_uint(const char *b)
 		counter++;
 		if (*(b + counter - 1) == '1')
 			sum += power_of_2(len - counter);
+		else if (*(b + counter - 1) != '0' || !len)
+			return (0);
 	}
 	return (sum);
 }
