@@ -29,13 +29,15 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int sum = 0, counter = 0, len;
 
+	if (!*b)
+		return (0);
 	len = strlen(b);
 	while (*(b + counter))
 	{
 		counter++;
 		if (*(b + counter - 1) == '1')
 			sum += power_of_2(len - counter);
-		else if (*(b + counter - 1) != '0' || !len)
+		else if (*(b + counter - 1) != '0')
 			return (0);
 	}
 	return (sum);
