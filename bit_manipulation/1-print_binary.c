@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_binary - prints decimals as binary
+ *
+ * @n: given decimal
+ */
+
 void print_binary(unsigned long int n)
 {
 	int last = n % 2;
