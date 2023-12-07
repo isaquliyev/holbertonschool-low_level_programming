@@ -29,7 +29,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int sum = 0, counter = 0, len;
 
-	if (!*b)
+	if (!b)
 		return (0);
 	len = strlen(b);
 	while (*(b + counter))
