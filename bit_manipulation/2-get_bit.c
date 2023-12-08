@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
  * get_bit - get value of bit at given index.
  *
@@ -10,13 +11,10 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	while (index)
-	{
-		index--;
-		n = n >> 1;
-		if (index && !n)
-			return (-1);
-	}
-	n = n & 1;
+	int a = sizeof(unsigned long int) * 8;
+
+	if (index >= a)
+		return (-1);
+	n = n >> index & 1;
 	return (n);
 }
