@@ -6,7 +6,7 @@
  * @n: given decimal.
  */
 
-void binary_printer(unsigned int n)
+void binary_printer(unsigned long int n)
 {
 	if (!n)
 		return;
