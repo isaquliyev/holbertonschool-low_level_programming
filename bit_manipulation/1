@@ -15,8 +15,7 @@ void binary_printer(unsigned int n)
 }
 
 /**
- * print_binary - prints 0 if n equals to zero
- * otherwise sends number to binary_printer.
+ * print_binary - prints 0 if n equals to zero, otherwise sends number to binary_printer.
  *
  * @n: given decimal.
  */
