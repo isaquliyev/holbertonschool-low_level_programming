@@ -10,7 +10,7 @@
  *
  * @filename: name of file.
  *
- * @text_content - the content of new file.
+ * @text_content: the content of new file.
  *
  * Return: if there are malloc fails, write and file
  * descriptor failures then returns 0, otherwise return 1.
@@ -21,8 +21,10 @@ int create_file(const char *filename, char *text_content)
 	int fd, w, i = 0;
 	char *buf;
 
+	if (!filename || !text_content)
+		return (-1);
 	buf = malloc(strlen(text_content) + 1);
-	if (!filename || !text_content || !buf)
+	if (!buf)
 		return (-1);
 	while (*(text_content + i) != '\0')
 	{
