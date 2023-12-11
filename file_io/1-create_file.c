@@ -25,13 +25,13 @@ int create_file(const char *filename, char *text_content)
 		text_content = "";
 	len = strlen(text_content);
 	buf = malloc(strlen(text_content) + 1);
-        if (!filename || !buf)
-                return (-1);
-        while (*(text_content + i) != '\0')
-        {
-                *(buf + i) = *(text_content + i);
-                i++;
-        }
+	if (!filename || !buf)
+		return (-1);
+	while (*(text_content + i) != '\0')
+	{
+		*(buf + i) = *(text_content + i);
+		i++;
+	}
 	fd = open(filename, O_EXCL);
 	if (fd == 3)
 		fd = open(filename, O_TRUNC | O_WRONLY);
