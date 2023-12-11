@@ -18,7 +18,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, w, i = 0;
+	int fd, w, i = 0i, len = strlen(text_content);
 	char *buf;
 
 	buf = malloc(strlen(text_content) + 1);
@@ -35,7 +35,9 @@ int create_file(const char *filename, char *text_content)
 		fd = open(filename, O_TRUNC | O_WRONLY);
 	else
 		fd = open(filename, O_CREAT | O_WRONLY, 0600);
-	w = write(fd, buf, strlen(text_content));
+	if (!text_content)
+		len = 1;
+	w = write(fd, buf, len);
 	if (fd == -1 || w == -1)
 		return (-1);
 	close(fd);
