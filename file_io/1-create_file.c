@@ -21,10 +21,8 @@ int create_file(const char *filename, char *text_content)
 	int fd, w, i = 0;
 	char *buf;
 
-	if (!filename || !text_content)
-		return (-1);
 	buf = malloc(strlen(text_content) + 1);
-	if (!buf)
+	if (!filename || !buf)
 		return (-1);
 	while (*(text_content + i) != '\0')
 	{
