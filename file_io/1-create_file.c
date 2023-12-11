@@ -36,7 +36,7 @@ int create_file(const char *filename, char *text_content)
 	else
 		fd = open(filename, O_CREAT | O_WRONLY, 0600);
 	if (!text_content)
-		len = 1;
+		return (1);
 	w = write(fd, buf, len);
 	if (fd == -1 || w == -1)
 		return (-1);
