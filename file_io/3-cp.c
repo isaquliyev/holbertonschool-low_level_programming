@@ -24,7 +24,7 @@ void copier(const char *file_from, const char *file_to)
 	r = read(fd, buf, BUFFER_SIZE);
 	if (fd == -1 || r == -1)
 	{
-		dprintf(STRERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 	umask(0);
