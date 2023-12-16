@@ -12,9 +12,9 @@ int main(void)
 {
     char *s;
 
-    s = "cisfun";
+    s = "hetairas";
     printf("%lu\n", hash_djb2((unsigned char *)s));
-    s = "Don't forget to tweet today";
+    s = "mentioner";
     printf("%lu\n", hash_djb2((unsigned char *)s));
     s = "98";
     printf("%lu\n", hash_djb2((unsigned char *)s));
