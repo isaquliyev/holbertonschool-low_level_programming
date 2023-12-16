@@ -3,21 +3,23 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
+	hash_node_t *tmp;
 	unsigned long int i = 0;
-	char checker;
-
+	char checker = 0;
+	
 	putchar('{');
-	while (++i < ht->size)
+	while (i < ht->size)
 	{
-		checker = 0;
-		while (ht->array[i])
+		tmp = ht->array[i];
+		while (tmp)
 		{
-			if (checker)
-				putchar(',');
+			if (checker == 1)
+				printf(", ");
 			printf("'%s': '%s'", ht->array[i]->key, ht->array[i]->value);
-			ht->array[i] = ht->array[i]->next;
 			checker = 1;
+			tmp = tmp->next;
 		}
+		i++;
 	}
 	puts("}");
 }
