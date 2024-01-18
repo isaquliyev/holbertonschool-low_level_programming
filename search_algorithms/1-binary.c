@@ -32,7 +32,7 @@ void print_array(int *array, size_t low, size_t high)
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t int i, low = 0, high = size -  1;
+	size_t i, low = 0, high = size -  1;
 
 	if (!array)
 		return (-1);
